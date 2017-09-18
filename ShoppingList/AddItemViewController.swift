@@ -15,6 +15,7 @@ class AddItemViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.itemNameTextField.delegate = self;
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +36,19 @@ extension AddItemViewController {
         guard let itemName = itemNameTextField.text else { return }
         if !itemName.isEmpty {
             ItemList.sharedList.items.value.append(Item(name: itemName))
-            print(ItemList.sharedList.items.value.count)
             self.view.removeFromSuperview()
         }
     }
+}
+
+extension AddItemViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let itemName = itemNameTextField.text else { return true }
+        if !itemName.isEmpty {
+            ItemList.sharedList.items.value.append(Item(name: itemName))
+            self.view.removeFromSuperview()
+        }
+        return true
+    }
+
 }

@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-HP-aFc" userLabel="PopUp">
-                                <rect key="frame" x="32" y="148" width="311" height="263"/>
+                                <rect key="frame" x="32" y="140" width="311" height="271"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlL-Dr-b1x">
                                         <rect key="frame" x="186" y="221" width="64" height="32"/>
@@ -34,27 +34,37 @@
                                             <action selector="closeAddItemPopUp:" destination="GFu-oL-SUd" eventType="touchUpInside" id="V9Q-bi-O4v"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-fG-wxQ">
-                                        <rect key="frame" x="16" y="213" width="64" height="32"/>
-                                        <state key="normal" title="Add">
-                                            <color key="titleColor" red="0.49357026859999997" green="0.49848811079999999" blue="0.72706170739999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addItemButtonPressed:" destination="GFu-oL-SUd" eventType="touchUpInside" id="QSs-jn-FDe"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Pn-pBa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS1-U0-QfD">
+                                        <rect key="frame" x="16" y="20.5" width="279" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.33725490200000002" green="0.36078431370000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Pn-pBa">
                                         <rect key="frame" x="16" y="80" width="279" height="40"/>
                                         <color key="textColor" red="0.33725490200000002" green="0.36078431370000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-fG-wxQ">
+                                        <rect key="frame" x="16" y="213" width="64" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" red="0.33725490200000002" green="0.36078431370000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addItemButtonPressed:" destination="GFu-oL-SUd" eventType="touchUpInside" id="QSs-jn-FDe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YbS-Pn-pBa" secondAttribute="trailing" constant="16" id="Fec-mV-wIC"/>
                                     <constraint firstItem="YbS-Pn-pBa" firstAttribute="leading" secondItem="Ihj-HP-aFc" secondAttribute="leading" constant="16" id="IcR-O9-XmH"/>
+                                    <constraint firstItem="mS1-U0-QfD" firstAttribute="bottom" secondItem="YbS-Pn-pBa" secondAttribute="top" constant="-24" id="L54-u2-fAi"/>
+                                    <constraint firstItem="mS1-U0-QfD" firstAttribute="leading" secondItem="Ihj-HP-aFc" secondAttribute="leading" constant="16" id="MqY-KB-oJ2"/>
                                     <constraint firstItem="YbS-Pn-pBa" firstAttribute="top" secondItem="Ihj-HP-aFc" secondAttribute="top" constant="64" id="P9O-EV-STs"/>
+                                    <constraint firstAttribute="trailing" secondItem="mS1-U0-QfD" secondAttribute="trailing" constant="16" id="Tbt-Wl-9OJ"/>
                                     <constraint firstAttribute="trailing" secondItem="nlL-Dr-b1x" secondAttribute="trailing" constant="16" id="UYP-BR-ERq"/>
                                     <constraint firstAttribute="bottom" secondItem="5FT-fG-wxQ" secondAttribute="bottom" constant="16" id="goG-Ny-zxh"/>
                                     <constraint firstItem="5FT-fG-wxQ" firstAttribute="leading" secondItem="Ihj-HP-aFc" secondAttribute="leading" constant="16" id="t0e-Z5-Pnx"/>
@@ -66,7 +76,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Ihj-HP-aFc" secondAttribute="trailing" constant="16" id="6ZM-d2-LTo"/>
                             <constraint firstItem="Ihj-HP-aFc" firstAttribute="leading" secondItem="ePL-l0-KJg" secondAttribute="leadingMargin" constant="16" id="iKm-wY-WZV"/>
-                            <constraint firstItem="Ihj-HP-aFc" firstAttribute="top" secondItem="Stk-Jz-PTJ" secondAttribute="bottom" constant="128" id="nF4-sA-Ssn"/>
+                            <constraint firstItem="Ihj-HP-aFc" firstAttribute="top" secondItem="Stk-Jz-PTJ" secondAttribute="bottom" constant="120" id="nF4-sA-Ssn"/>
                             <constraint firstItem="572-lQ-v2c" firstAttribute="top" secondItem="Ihj-HP-aFc" secondAttribute="bottom" constant="256" id="qom-sP-9Lt"/>
                         </constraints>
                     </view>

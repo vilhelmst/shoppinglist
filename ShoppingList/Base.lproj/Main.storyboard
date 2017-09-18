@@ -86,7 +86,7 @@
                                     </toolbar>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tRS-fQ-94T">
                                         <rect key="frame" x="-16" y="0.0" width="375" height="44"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,6 +117,7 @@
                     <connections>
                         <outlet property="addItemButton" destination="AYh-uE-wji" id="bTa-OT-xGB"/>
                         <outlet property="itemTableView" destination="z1G-HV-uur" id="3k0-ef-Eek"/>
+                        <outlet property="searchBar" destination="tRS-fQ-94T" id="YlK-8I-EMu"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="w2y-aw-qGC"/>
                         <segue destination="eYC-lp-KfN" kind="show" identifier="addItemPopUp" id="dUN-Mm-07a"/>
                     </connections>
